@@ -4,18 +4,14 @@ import src.main.model.Team;
 
 public interface Driver {
 
-    //EFFECTS: returns the drivers name future implementation could include discord_id
+    //getters
     String getDriverName();
 
-    //EFFECTS: returns the drivers racing number
     int getDriverNumber();
 
-    //EFFECTS: returns the drivers Team
     Team getDriverTeam();
 
-    //EFFECTS: returns the driver's Full time status
     boolean getDriverFullTimeStatus();
-
 
     //setters
     void setDriverName(String driverName);
@@ -25,5 +21,4 @@ public interface Driver {
     void setDriverTeam(Team driverTeam);
 
     void setDriverFullTimeStatus(boolean status);
-
 }
