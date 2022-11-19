@@ -1,35 +1,61 @@
 package src.main.model.drivers;
 
+import src.main.model.Team;
+
 public class FullTimeDriver implements Driver {
-    public String name;
+    public String driverName;
     public int driverNumber;
     public boolean FTDriverStatus;
-    public String team;
+    public Team driverTeam;
 
     //Constructor to initialize the driver parameters
-    public FullTimeDriver(String name, int driverNumber, boolean FTDriverStatus, String team) {
-        this.name = name;
+    public FullTimeDriver(String driverName, int driverNumber, boolean FTDriverStatus, Team driverTeam) {
+        this.driverName = driverName;
         this.driverNumber = driverNumber;
-        this.FTDriverStatus = FTDriverStatus;
-        this.team = team;
+        this.FTDriverStatus = true;
+        this.driverTeam = driverTeam;
     }
 
-
-    //setters
-    public void setDriverName(String name) {
-        this.name = name;
+    @Override
+    public String getDriverName() {
+        return driverName;
     }
 
+    @Override
+    public int getDriverNumber() {
+        return driverNumber;
+    }
+
+    @Override
+    public Team getDriverTeam() {
+        return driverTeam;
+    }
+
+    @Override
+    public boolean getDriverFullTimeStatus() {
+        return FTDriverStatus;
+    }
+
+    @Override
+    public void setDriverName(String driverName) {
+        this.driverName = driverName;
+    }
+
+    @Override
     public void setDriverNumber(int driverNumber) {
         this.driverNumber = driverNumber;
+        
     }
 
-    public void setDriverStatus(boolean FTDriverStatus) {
-        this.FTDriverStatus = FTDriverStatus;
+    @Override
+    public void setDriverTeam(Team driverTeam) {
+        this.driverTeam = driverTeam;
+        
     }
 
-    public void setDriverTeam(String team) {
-        this.team = team;
+    @Override
+    public void setDriverFullTimeStatus(boolean status) {
+        FTDriverStatus = status;
     }
 
 }
