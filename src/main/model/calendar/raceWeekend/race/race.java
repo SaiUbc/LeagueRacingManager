@@ -6,7 +6,6 @@ public class race {
     private RaceDistance distance;
     private int laps;
 
-
     //getters
     public int getLaps() {
         return laps;
